@@ -9,6 +9,10 @@
 import UIKit
 
 class StartViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
 
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var lblReaWonKim: UILabel!
@@ -19,17 +23,17 @@ class StartViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var lblScore: UILabel!
     var hinh: Int = 2
-    var timer: NSTimer!
+    var timer: Timer!
     var player = ["Rea Won Kim", "John Terry", "Ronaldo"]
     var playerImage: [String]!
-    var thamSoTruyen : NSUserDefaults!
+    var thamSoTruyen : UserDefaults!
     var i: Int! = 100
     var score : Int! = 100
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lblScore.text = String(score)
-        thamSoTruyen = NSUserDefaults()
+        thamSoTruyen = UserDefaults()
         pickerView.delegate = self
         playerImage = ["black1.png", "green1.png", "pic1.png"]
         //player = [NSMutableArray all
@@ -39,14 +43,14 @@ class StartViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1;
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return playerImage.count
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return playerImage[row]
     }
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
-        let viewImageInPickerView: UIImageView = UIImageView(frame: CGRectMake(0, 0, 92, 142))
+        let viewImageInPickerView: UIImageView = UIImageView(frame: CGRect(x: 0,y: 0,width: 92,height: 142))
         viewImageInPickerView.image = UIImage(named: playerImage[row])
         return viewImageInPickerView
     }
@@ -115,10 +119,11 @@ class StartViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }*/
 
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        thamSoTruyen.setObject(String(i), forKey: "bien")
-        thamSoTruyen.setObject(score, forKey: "score")
+        thamSoTruyen.set(String(i), forKey: "bien")
+        thamSoTruyen.set(score, forKey: "score")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
