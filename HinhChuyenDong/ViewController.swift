@@ -36,6 +36,13 @@ class ViewController: UIViewController {
         toaDoHinh1 = 50
         toaDoHinh2 = 50
         toaDoHinh3 = 50
+        /*
+         imgConCho = UIImageView(frame:CGRectMake(CGFloat(50), CGFloat(50), 116, 85))
+         imgConCho.image = UIImage(named: "black1.png")
+         imgBlack = UIImageView(frame: CGRectMake(CGFloat(50), CGFloat(150), 116, 85))
+         imgBlack.image = UIImage(named: "green1.png")
+         imgGreen = UIImageView(frame: CGRectMake(CGFloat(50), CGFloat(250), 116, 85))
+         */
         imgConCho = UIImageView(frame:CGRectMake(CGFloat(50), CGFloat(50), 116, 85))
         imgConCho.image = UIImage(named: "black1.png")
         imgBlack = UIImageView(frame: CGRectMake(CGFloat(50), CGFloat(150), 116, 85))
