@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -182,26 +181,17 @@
                                 <rect key="frame" x="67" y="470" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Everyone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgC-EG-fb5">
-                                <rect key="frame" x="20" y="20" width="115" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Rea Won Kim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-fg-sug">
+                                <rect key="frame" x="222" y="20" width="145" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAZ-D1-UEp">
-                                <rect key="frame" x="327" y="629" width="34" height="30"/>
-                                <state key="normal" title="Click"/>
-                                <connections>
-                                    <segue destination="VDI-DK-D8b" kind="push" id="Lel-zf-xC6"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wgC-EG-fb5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="0Wa-rq-9wc"/>
-                            <constraint firstItem="wgC-EG-fb5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="13y-Nc-dez"/>
-                            <constraint firstAttribute="trailing" secondItem="zAZ-D1-UEp" secondAttribute="trailing" constant="14" id="q1j-Pc-cCD"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zAZ-D1-UEp" secondAttribute="bottom" constant="8" id="yEF-KK-8Z6"/>
+                            <constraint firstItem="nZ4-fg-sug" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8zN-1q-Vyd"/>
+                            <constraint firstAttribute="trailing" secondItem="nZ4-fg-sug" secondAttribute="trailing" constant="8" id="CaW-lB-0IF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -214,26 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="505.5" y="354.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="paM-ea-rrh">
-            <objects>
-                <viewController id="VDI-DK-D8b" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tNX-f0-IvJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="ze2-pm-ci7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8gi-Cb-2fj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="SjR-Ti-4at"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8p9-32-Wm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1262" y="354"/>
+            <point key="canvasLocation" x="513" y="342"/>
         </scene>
     </scenes>
     <resources>
